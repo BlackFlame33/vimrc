@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+![vimrc](https://socialify.git.ci/BlackFlame33/vimrc/image?description=1&descriptionEditable=My%20vimrc&font=Source%20Code%20Pro&forks=1&issues=1&language=1&logo=http%3A%2F%2Fblackflame33.cn%2Fimg%2Favatar.png&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Light)
 
-You can use the [editor on GitHub](https://github.com/BlackFlame33/vimrc/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+# 我的个人vimrc
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+在断断续续使用vim半年后,我终于决定将vim作为我今后的主力编辑器.感谢[amix/vimrc](https://github.com/amix/vimrc)让我在习惯vim的过程中不断发出"Wow, awesome!"的感叹.但在我想更改或添加配置时,总是感觉力不从心.这是因为我仅仅只是使用了这套配置,而从没有真正深入了解过这套配置.
 
-### Markdown
+所以我在花了一两个星期阅读所有<code>vimrcs</code>文件夹下的文件,以及配套的插件仓库主页wiki,最终生成了一份我个人的<code>.vimrc</code>.这套配置能让我很轻易的在Windows和Mac OS上同步我的vim配置.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+我还在持续不断地学习vim,这个README.md的目的主要还是来写一些配置的说明,方便自己不明白的时候不用花重复的时间翻阅wiki和google
 
-```markdown
-Syntax highlighted code block
+## 如何安装?
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```shell
+git clone --depth=1 git@github.com:BlackFlame33/vimrc.git ~/.vim_runtime
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+配置主体的格式是类似这样的:
 
-### Jekyll Themes
+```shell
+├── my_configs.vim			// 个性化设置 
+├── .vimrc				    // 配置主体
+└── vimrcs				    // 拆开的各部分设定
+    ├── basic.vim			// 通用的基础设置
+    ├── extended.vim		// 通用的高级设置
+    ├── filetypes.vim		// 打开对应文件时调用的设置
+    └── plugins_config.vim	// 插件的相关设置,随登录的插件变化而变化
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BlackFlame33/vimrc/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## 字体
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+因为[vim-airline](https://github.com/vim-airline/vim-airline)的一些配置需要使用[powerline-fonts](https://github.com/powerline/fonts),如果字体不兼容的话显示效果会大打折扣.我推荐的是FiraCode Nerd Font
