@@ -6,8 +6,9 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [我的个人 vimrc](#%E6%88%91%E7%9A%84%E4%B8%AA%E4%BA%BA-vimrc)
-  - [如何安装](#%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85)
+  - [配置目录结构](#%E9%85%8D%E7%BD%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
   - [字体](#%E5%AD%97%E4%BD%93)
+  - [如何安装](#%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85)
   - [其他](#%E5%85%B6%E4%BB%96)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -17,7 +18,7 @@
 
 在断断续续使用 vim 半年后，我终于决定将 vim 作为我今后的主力编辑器。感谢[amix/vimrc](https://github.com/amix/vimrc)让我在习惯 vim 的过程中不断发出"Wow, awesome!"的感叹。但在我想添加或更改配置时，总是感觉力不从心，并很容易出错。这是因为我仅仅只是使用了这套配置，而从没有真正深入了解过。
 
-所以我决定建立一个真正属于自己的 vimrc 体系。在花了一两个星期阅读所有<code>amix/vimrc/vimrcs</code>文件夹下的文件,以及满足我个人需求的一些插件的仓库主页 wiki 后，最终生成了一份我个人的<code>.vimrc</code>。这套配置能让我很轻易的在 Windows 和 Mac OS 上同步我的 vim 配置，并享受使用 vim 的快乐。
+所以我决定建立一个真正属于自己的 vimrc 体系。在花了一两个星期阅读所有<code>amix/vimrc/vimrcs</code>文件夹下的文件,以及满足我个人需求的一些插件的仓库主页 wiki 后，最终生成了一份我个人的<code>.vimrc</code>。这套配置能让我很轻易的在 Windows(准确的说是WSL) 和 Mac OS 上同步我的 vim 配置，并享受使用 vim 的快乐。
 
 我还在持续不断地学习 vim。这个仓库的目的除了托管外，还是想写一些配置的说明，方便自己不明白的时候不用花重复的时间翻阅 wiki 和 Google。
 
@@ -30,13 +31,16 @@
 配置的结构是这样的:
 
 ```shell
-├── install.sh			    // 安装脚本
-├── my_configs.vim			// 个性化设置 
-└── vimrcs				    // 拆开的各部分设定
-    ├── basic.vim			// 通用的基础设置
-    ├── extended.vim		// 通用的高级设置
-    ├── filetypes.vim		// 打开对应文件时调用的设置
-    └── plugins_config.vim	// 插件的相关设置,随登录的插件变化而变化
+|-- README.md               // 仓库说明文档
+|-- docs                    // Github Pages 的文档
+|-- install.sh              // 安装脚本
+|-- my_configs.vim          // 个性化设置 
+└-- vimrcs                  // 拆开的各部分设定
+    |-- basic.vim           // 通用的基础设置
+    |-- extended.vim        // 通用的高级设置
+    |-- filetypes.vim       // 打开对应文件时调用的设置
+    |-- plugins_config.vim  // 插件的相关设置,随登录的插件变化而变化
+    └-- pluglist.vim        // vim-plug 插件列表，随登录的插件变化而变化
 ```
 
 ## 字体
@@ -60,4 +64,4 @@ sh ~/.vim_runtime/install.sh
 
 未完待续～
 
-> TO-DO: myconfigs.vim
+> TO-DO: vimrc 的修改流程
