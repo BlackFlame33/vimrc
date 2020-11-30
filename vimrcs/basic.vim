@@ -22,10 +22,15 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Line number
+set number
+set relativenumber
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
 " Enable filetype plugins
+filetype on
 filetype plugin on
 filetype indent on
 
@@ -118,6 +123,16 @@ endif
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" DIY cursor style
+set nrformats=
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
+
+" Use mouse to move
+set mouse=a
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -168,8 +183,9 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " Linebreak on 500 characters
 set lbr
@@ -189,6 +205,10 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Quick move
+noremap J 5j
+noremap K 5k
+
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
@@ -196,7 +216,14 @@ map <C-space> ?
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
-" Smart way to move between windows
+" Smart way to create, move and manage windows
+map sl :set splitright<CR>:vsplit<CR>
+map sh :set nosplitright<CR>:vsplit<CR>
+map sk :set nosplitbelow<CR>:split<CR>
+map sj :set splitbelow<CR>:split<CR>
+map sv <C-w>t<C-w>H
+map sh <C-w>t<C-w>K
+
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
