@@ -44,7 +44,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 """"""""""""""""""""""""""""""
 " Enable just for html/css
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,jsp EmmetInstall
 
 " Redefine trigger key
 let g:user_emmet_leader_key='<C-Z>'
