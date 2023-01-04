@@ -22,7 +22,7 @@ set guioptions-=L
 
 " Colorscheme
 set background=dark
-colorscheme solarized
+colorscheme dracula
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

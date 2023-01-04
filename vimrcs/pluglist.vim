@@ -7,13 +7,11 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'altercation/vim-colors-solarized'
 
 " Chinese vim help
 Plug 'yianwillis/vimcdoc'
 
 Plug 'gcmt/wildfire.vim'
-Plug 'zxqfl/tabnine-vim'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mileszs/ack.vim', {'on': 'Ack'}
 Plug 'jlanzarotta/bufexplorer'
@@ -23,9 +21,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim',{'for':['html','css','js','jsp']}
 
 " Track the engine.
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " File system explorer
 Plug 'preservim/nerdtree' |
@@ -65,6 +63,15 @@ Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
 " Class outline viewer
 Plug 'preservim/tagbar',{'on': 'TagbarOpenAutoClose'}
+
+" Dracula theme for vim
+Plug 'dracula/vim',{'as':'dracula'}
+
+" coc.nvim
+Plug 'neoclide/coc.nvim',{'branch': 'release'}
+
+" auto-pairs
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
